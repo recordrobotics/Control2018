@@ -24,6 +24,7 @@ public class driveJoystick extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() 
     {
+    
     	Joystick joystick = OI.get_joystick();
 		double x_value = joystick.getX();
 		double y_value = joystick.getY();
