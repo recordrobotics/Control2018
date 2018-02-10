@@ -2,6 +2,7 @@ package org.usfirst.frc.team6731.robot.commands;
 
 import org.usfirst.frc.team6731.robot.OI;
 import org.usfirst.frc.team6731.robot.Robot;
+import org.usfirst.frc.team6731.robot.RobotMap;
 import org.usfirst.frc.team6731.robot.subsystems.Drivetrain;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -26,9 +27,10 @@ public class driveJoystick extends Command {
     {
     
     	Joystick joystick = OI.get_joystick();
-		double x_value = joystick.getX();
-		double y_value = joystick.getY();
-		Drivetrain.driveCheesy(y_value, x_value);	
+		double x_value = joystick.getRawAxis(RobotMap.forwardAxis);
+		double y_value = joystick.getRawAxis(RobotMap.turnAxis);
+		double sens = joystick.getRawAxis(RobotMap.sensAxis);
+		Drivetrain.driveCheesy(y_value, x_value, 0.5);	
     }
 
     // Make this return true when this Command no longer needs to run execute()
