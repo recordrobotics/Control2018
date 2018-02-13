@@ -1,6 +1,7 @@
 package org.usfirst.frc.team6731.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team6731.robot.OI;
 import org.usfirst.frc.team6731.robot.RobotMap;
@@ -30,6 +31,9 @@ public class Drivetrain extends Subsystem {
 		left_motor2.set(-left);
 		right_motor1.set(right);
 		right_motor2.set(right);
+		
+		SmartDashboard.putNumber("Left", left);
+		SmartDashboard.putNumber("Right", right);
 		
 		System.out.println("Left: " + left + "  Right: " + right);
 	}

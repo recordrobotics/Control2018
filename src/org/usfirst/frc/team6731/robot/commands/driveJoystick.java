@@ -7,6 +7,7 @@ import org.usfirst.frc.team6731.robot.subsystems.Drivetrain;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -27,10 +28,12 @@ public class driveJoystick extends Command {
     {
     
     	Joystick joystick = OI.get_joystick();
-		double x_value = joystick.getRawAxis(RobotMap.forwardAxis);
-		double y_value = joystick.getRawAxis(RobotMap.turnAxis);
+		double forward = joystick.getRawAxis(RobotMap.forwardAxis);
+		double turn = joystick.getRawAxis(RobotMap.turnAxis);
+		SmartDashboard.putNumber("forward", forward);
 		double sens = joystick.getRawAxis(RobotMap.sensAxis);
-		Drivetrain.driveCheesy(y_value, x_value, 0.5);	
+		SmartDashboard.putNumber("sens", sens);
+		Drivetrain.driveCheesy(forward, turn, 0.5);
     }
 
     // Make this return true when this Command no longer needs to run execute()

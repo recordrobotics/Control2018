@@ -18,8 +18,8 @@ public class RobotMap {
 
 	public static int joystickPort = 0;
 	
-	public static int forwardAxis = 0;
-	public static int turnAxis = 3;
+	public static int forwardAxis = 1;
+	public static int turnAxis = 0;
 	public static int sensAxis = 2;
 	
 	// If you are using multiple modules, make sure to define both the port
