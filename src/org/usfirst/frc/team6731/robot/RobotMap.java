@@ -15,6 +15,8 @@ public class RobotMap {
 	public static int motor2Port = 5; //1;
 	public static int motor3Port = 2;
 	public static int motor4Port = 3;
+	
+	public static int climbPort = 4;
 
 	public static int joystickPort = 0;
 	
