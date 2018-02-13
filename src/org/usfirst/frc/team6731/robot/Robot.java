@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team6731.robot.commands.EmptyAuto;
 import org.usfirst.frc.team6731.robot.subsystems.Drivetrain;
+import org.usfirst.frc.team6731.robot.subsystems.Grabber;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -21,6 +22,7 @@ import org.usfirst.frc.team6731.robot.subsystems.Drivetrain;
 public class Robot extends IterativeRobot {
 
 	public static final Drivetrain drivetrain = new Drivetrain();
+	public static final Grabber grabber = new Grabber();
 	public static OI oi;
 
 	Command autonomousCommand;
